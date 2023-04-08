@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>ClassRoom Manager</title>
 </head>
-<body>
-    <h1>Classroom Manager</h1>
-    <ul id="student-list">
 
-    </ul>
-    <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
-    <div>
-        <h3>Inserimento Studente</h3>
-        <div>
-            <span>nome</span>
-            <input type="text">
+<body>
+    <div class="container">
+        <div class="prima-parte">
+            <h1>Classroom Manager</h1>
+            <ul id="student-list">
+    
+            </ul>
+    
+            <button class="button-shuffle" onclick="shuffleTheClassroom()"> <img src="assets/pngtree-shuffle-icon-image_1197566.png" alt=""></button>
         </div>
-        <div>
-            <span>cognome</span>
-            <input type="text">
+    
+        <div class="seconda-parte"> 
+            <h3>Inserimento Studente</h3>
+            <div>
+                <span id="name">nome</span>
+                <input type="text" id="student-name">
+            </div>
+            <div>
+                <span id="surname">cognome</span>
+                <input type="text" id="student-surname">
+            </div>
         </div>
-        <button onclick="addStudentToClassroom()">Inserisci studente</button>
+            <button class="button-add" onclick="addStudentToClassroom()"><img src="./assets/png-transparent-computer-icons-add-logo-desktop-wallpaper-add-thumbnail(1).png" alt=""></button>
+     
     </div>
 </body>
+<script src="./student.js"></script>
+<script src="./classroom.js"></script>
+<script src="./main.js"></script>
+
 </html>
+
+<img src="./assets/bin.png" alt="">

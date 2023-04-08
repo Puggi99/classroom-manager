@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Twinkle+Star&display=swap');
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("./assets/star-fingers\(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul{
+    width: 25vw;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "student student student student"
+    "student student student student"
+    "   .    student     .   student";
+    padding: 0;
+    /* border: 1px solid rgb(191, 218, 95);
+    background-color:rgb(255, 255, 255); */
+    text-align: center;
+    list-style-position: inside;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 10px;
+    margin-top: 50px;
+    
+  
+
+}
+
+
+li{
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    background-color: rgba(245, 245, 245, 0.048);
+    border-radius: 50%;
+    padding: 10px;
+ 
+    
+}
+.container{
+    background-image: url("./assets/stella.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10% 10% 10% 10%;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: right;
+    padding: 50px 100px 40px 100px;
+    margin: 1vh 33vw;
+    background-color: rgba(8, 8, 2, 0.425)
+    
+    
+    
+}
+
+.prima-parte{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+
+    
+
+}
+
+h1{
+    height: 100%;
+    width: 100%;
+    font-family: 'Kavoon', cursive;
+    align-self: center;
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 3vh;
+    text-shadow: 4px 4px #020000d7;
+    color:crimson;
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+}
+
+.ListaStudenti{
+    font-family: 'Bree Serif', serif;  
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+
+#student-list{
+    display: grid;
+    grid-area: student;
+    grid-template-columns: (repeat, 1fr);
+    font-family: 'Twinkle Star', cursive;
+    font-size: 18px;
+    font-weight: 600;
+    color:whitesmoke;
+    /* -webkit-text-stroke: 2px rgba(252, 177, 38, 0.295); */
+    margin-bottom: 30px;
+    
+}
+
+
+.seconda-parte{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+    padding-top: 0;
+
+}
+
+h3{
+    height: 100%;
+    width: 100%;
+    font-family: 'Kavoon', cursive;
+    align-self: center;
+    text-align: center;
+    padding-top: 1vh;
+    text-shadow: 3px 3px #020000d7;
+    color:crimson;
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+}
+
+#name{
+    font-family: 'Bree Serif', serif;
+    font-size: 18px;
+    color: rgb(192, 150, 79);
+    text-shadow: 2px 2px #020000;
+    -webkit-text-stroke: 2px rgba(252, 177, 38, 0.295);
+    padding:23px;
+    
+}
+
+#surname{
+    font-family: 'Bree Serif', serif;
+    font-size: 18px;
+    color: rgb(192, 150, 79);
+    text-shadow: 2px 2px #020000;
+    -webkit-text-stroke: 2px rgba(252, 177, 38, 0.295);
+    padding:10px
+}
+
+.button-shuffle{
+    margin: 25px 30px 10px 30px;;
+    text-shadow: 2px 2px white;
+    color: rgba(128, 0, 38, 0.829);
+    background-color: rgba(8, 8, 2, 0); 
+    border: 0px;
+
+}
+
+.button-shuffle img{
+    height: 40px;
+    width: 70px;
+    /* justify-content: center;
+    align-items: center; */
+}
+.button-add img{
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 0, 0, 0.11);
+}
+.button-add{
+    margin: 30px 30px 0px 30px;;
+    border: 0px; 
+    background-color: rgba(8, 8, 2, 0); 
+   
+}
+
+button{
+    font-family: 'Kavoon', cursive;
+    text-shadow: 2px 2px rgba(151, 143, 143, 0.527);
+    color: rgba(204, 60, 60, 0.726);
+    background-color: rgba(172, 255, 47, 0.068);
+}
+
+#removeButton{
+    height:20px;
+    width: 20px;
+    border: 0px;
+    background-image: url(./assets/bin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(255, 0, 0, 0.11);
+}
