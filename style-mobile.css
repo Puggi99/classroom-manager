@@ -1,22 +1,30 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Roboto&display=swap');
+
+
+@media only screen and (max-width: 600px) {
+    /* * header{
+    box-sizing: border-box;
+    border: solid red 1px;
+} */
+
+
 html{
     width: 100%;
     height: 100%;
 }
 body{
+    height:100vh;
     background-image: url("./assets/star-fingers\(1\).jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 ul{
     width: 25vw;
     height: 25vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "student student student student"
-    "student student student student"
-    "   .    student     .   student";
     padding: 0;
     /* border: 1px solid rgb(191, 218, 95);
     background-color:rgb(255, 255, 255); */
@@ -24,6 +32,7 @@ ul{
     list-style-position: inside;
     justify-content: space-evenly;
     align-content: center;
+    align-self: center;
     padding: 10px;
     margin-top: 50px;
     
@@ -48,6 +57,7 @@ li{
     
 }
 .container{
+
     background-image: url("./assets/stella.png");
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -57,8 +67,8 @@ li{
     display: inline-flex;
     flex-direction: column;
     justify-content: right;
-    padding: 50px 100px 40px 100px;
-    margin: 1vh 33vw;
+    padding: 30px 100px 20px 100px;
+    margin: 0;
     background-color: rgba(8, 8, 2, 0.425)
     
     
@@ -104,12 +114,14 @@ h1{
     display: grid;
     grid-area: student;
     grid-template-columns: (repeat, 1fr);
-    font-family: 'Roboto', sans-serif;    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    font-size: 11px;
     color:rgba(72, 185, 110, 0.671);
+
     
     /* -webkit-text-stroke: 2px rgba(252, 177, 38, 0.295); */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     
 }
 
@@ -199,4 +211,6 @@ button{
     background-size: cover;
     background-position: center center;
     background-color: rgba(255, 0, 0, 0.11);
+}
+
 }
