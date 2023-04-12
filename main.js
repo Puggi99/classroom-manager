@@ -20,28 +20,31 @@ const student10 = new Student('Vlad', 'Ukraine', "11-12-1997");
 const classroom1 = new ClassRoom([student1, student2, student3, student4,student5, student6, student7, student8,student9,student10]);
 
 
-function displayClassroom(classroom) {
-    document.getElementById('student-list').innerHTML = ''
-    const classroomStudents = classroom.students
-    for (let i = 0; i < classroomStudents.length; i++) {
-        const element = classroomStudents[i];
-        const studentList = document.getElementById('student-list')
-        const newLi = document.createElement('li')
-        const text = document.createTextNode((element.name) + ' ' + (element.surname)) //+ ' ' +(element.dob))
-        const removeButton = document.createElement('button')
-        removeButton.setAttribute("id", "removeButton")
-        const buttonText = document.createTextNode('')
-        removeButton.appendChild(buttonText)
-        removeButton.addEventListener('click', (event) => classroom1.removeStudent(element))
-        newLi.appendChild(text)
-        newLi.appendChild(removeButton)
-        studentList.appendChild(newLi)
+// function displayClassroom(classroom) {
+//     document.getElementById('student-list').innerHTML = ''
+//     const classroomStudents = classroom.students
+//     for (let i = 0; i < classroomStudents.length; i++) {
+//         const element = classroomStudents[i];
+//         const studentList = document.getElementById('student-list')
+//         const newLi = document.createElement('li')
+//         const text = document.createTextNode((element.name) + ' ' + (element.surname)) //+ ' ' +(element.dob))
+//         const removeButton = document.createElement('button')
+//         removeButton.setAttribute("id", "removeButton")
+//         const buttonText = document.createTextNode('')
+//         removeButton.appendChild(buttonText)
+//         removeButton.addEventListener('click', (event) => classroom1.removeStudent(element))
+//         newLi.appendChild(text)
+//         newLi.appendChild(removeButton)
+//         studentList.appendChild(newLi)
        
 
-    }
-}
+//     }
+// }
 
-displayClassroom(classroom1)
+
+
+// displayClassroom(classroom1)
+
 
 
 // function highlightIfBirthday() {
@@ -70,3 +73,58 @@ function addStudentToClassroom() {
 }
 
 
+
+
+
+// _________________________________________________________________________________________________________________________________________
+
+function displayClassroom(classroom){
+
+    const stundentList = document.getElementById('student-list');
+    stundentList.innerHTML = '';
+
+    for (let i = 0; i < classroom.students.length; i++) {
+        const student = classroom.students[i];
+        stundentList.innerHTML += `<li class="list-element">${student.name} ${student.surname}<button id="removeButton${i}"></button></li>`
+    }    
+    
+    for (let i = 0; i < classroom.students.length; i++) {
+        const student = classroom.students[i];
+        const removeButton = document.getElementById("removeButton" + i);
+        console.log(JSON.stringify(removeButton));
+        removeButton.addEventListener('click', (event) =>removeStudentFromClassroom(student));
+    }
+
+}
+
+function removeStudentFromClassroom(student){
+    console.log(classroom1)
+    classroom1.removeStudent(student);
+    displayClassroom(classroom1)
+}
+
+
+displayClassroom(classroom1)
+
+
+
+// function displayClassroom(classroom) {
+//     document.getElementById('student-list').innerHTML = ''
+//     const classroomStudents = classroom.students
+//     for (let i = 0; i < classroomStudents.length; i++) {
+//         const element = classroomStudents[i];
+//         const studentList = document.getElementById('student-list')
+//         const newLi = document.createElement('li')
+//         const text = document.createTextNode((element.name) + ' ' + (element.surname)) //+ ' ' +(element.dob))
+//         const removeButton = document.createElement('button')
+//         removeButton.setAttribute("id", "removeButton")
+//         const buttonText = document.createTextNode('')
+//         removeButton.appendChild(buttonText)
+//         removeButton.addEventListener('click', (event) => classroom1.removeStudent(element))
+//         newLi.appendChild(text)
+//         newLi.appendChild(removeButton)
+//         studentList.appendChild(newLi)
+       
+
+//     }
+// }

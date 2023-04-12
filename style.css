@@ -106,7 +106,7 @@ h1{
     grid-template-columns: (repeat, 1fr);
     font-family: 'Roboto', sans-serif;    font-size: 18px;
     font-weight: 600;
-    color:rgba(72, 185, 110, 0.671);
+    color:#85682a;
     
     /* -webkit-text-stroke: 2px rgba(252, 177, 38, 0.295); */
     margin-bottom: 30px;
